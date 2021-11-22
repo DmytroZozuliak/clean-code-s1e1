@@ -47,7 +47,7 @@
   padding: 0;
 }
 
-li, .list-title {
+.list-element, .list-title {
   list-style:none;
 }
 
@@ -55,7 +55,7 @@ input,button{
   outline:none;
 }
 
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -65,13 +65,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
 .list-title,
-label[for="new-task"] {
+.label[for="new-task"] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -81,30 +81,30 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.input[type="text"] {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
   height: 21px;
   padding: 0 9px;
-  border: 1px solid #dDd;
-  background: #FFF;
+  border: 1px solid #ddd;
+  background: #fff;
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
 }
 
-input[type="text"]:focus {
+.input[type="text"]:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
 
-input#new-task {
+#new-task {
   width: 318px;
 }
 
@@ -122,47 +122,48 @@ input#new-task {
   vertical-align: middle;
 }
 
-.list-element > input[type="checkbox"] {
+.list-element > .input[type="checkbox"] {
   margin: 0 10px;
 }
 
-.list-element > label {
+.list-element > .label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.list-element >  input[type="text"] {
+.list-element > .input[type="text"] {
   width: 226px
 }
 
-button.delete img {
+.button.delete .icon-btn {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.button.delete .icon-btn:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.list#completed-tasks label {
+#completed-tasks .label {
   text-decoration: line-through
   color: #888;
 }
 
 /* Edit Task */
-.list .list-element input[type=text] {
+.list .list-element .input[type=text] {
   display:none
 }
 
-.list .list-element.edit-mode input[type=text] {
+.list .list-element.edit-mode .input[type=text] {
   display:inline-block;
   width:224px
 }
 
-.list .list-element.edit-mode label {
+.list .list-element.edit-mode .label {
   display:none;
 }
+
