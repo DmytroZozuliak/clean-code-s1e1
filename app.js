@@ -9,7 +9,7 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput=document.getElementById("new-task");//Add a new task.
-let addButton = document.querySelectorAll('.button')[0];//first button
+let addButton = document.querySelectorAll('.todo__button')[0];//first button
 // var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incomplete-tasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
@@ -19,7 +19,7 @@ var completedTasksHolder=document.getElementById("completed-tasks");//completed-
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
-    listItem.classList.add('list-element');
+    listItem.classList.add('list__element');
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
@@ -36,19 +36,19 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='label task';
+    label.className='todo__label task';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
-    checkBox.className="input";
+    checkBox.className="todo__input-checkbox";
 
     editInput.type="text";
-    editInput.className="input task";
+    editInput.className="todo__input-text task";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="button edit";
+    editButton.className="todo__button todo__button-edit";
 
-    deleteButton.className="button delete";
+    deleteButton.className="todo__button todo__button-delete";
 
     deleteButtonImg.src='./remove.svg';
     deleteButtonImg.className="icon-btn";
@@ -89,9 +89,9 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('.input[type=text]');
-    var label=listItem.querySelector(".label");
-    var editBtn=listItem.querySelector(".edit");
+    var editInput=listItem.querySelector('.todo__input-text');
+    var label=listItem.querySelector(".todo__label");
+    var editBtn=listItem.querySelector(".todo__button-edit");
     var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
@@ -162,9 +162,9 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector(".input[type=checkbox]");
-    var editButton=taskListItem.querySelector(".button.edit");
-    var deleteButton=taskListItem.querySelector(".button.delete");
+    var checkBox=taskListItem.querySelector(".todo__input-checkbox");
+    var editButton=taskListItem.querySelector(".todo__button.todo__button-edit");
+    var deleteButton=taskListItem.querySelector(".todo__button.todo__button-delete");
 
 
     //Bind editTask to edit button.
