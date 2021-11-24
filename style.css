@@ -141,13 +141,13 @@ button{
   width: 226px;
 }
 
-.todo__button.todo__button-delete .icon-btn {
+.todo__button.todo__button-delete .list__icon-btn {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.todo__button.todo__button-delete .icon-btn:hover {
+.todo__button.todo__button-delete .list__icon-btn:hover {
   transform: rotateZ(0);
 }
 
