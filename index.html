@@ -18,7 +18,7 @@
       Want more details?</a>
     </section>
 
-    <section class="todo-wrapper todo">
+    <section class="todo">
       <p class="todo__paragraph">
         <label class="todo__label label__new-task" for="new-task">Add Item</label>
         <div class="todo__task-wrapper">
@@ -30,22 +30,22 @@
       <h3 class="todo__list-title">Todo</h3>
       <ul id="incomplete-tasks" class="todo__list list">
         <li class="list__element">
-          <input type="checkbox" class="todo__input-checkbox">
+          <input type="checkbox" class="list__input-checkbox">
           <label class="todo__label task">Pay Bills</label>
           <input type="text" class="todo__input-text task">
           <button class="todo__button todo__button-edit">Edit</button>
           <button class="todo__button todo__button-delete">
-            <img class="icon-btn" src="./remove.svg" alt="">
+            <img class="list__icon-btn" src="./remove.svg" alt="">
           </button>
         </li>
         <li class="list__element edit-mode">
-          <input type="checkbox" class="todo__input-checkbox">
+          <input type="checkbox" class="list__input-checkbox">
           <label class="todo__label task">Go Shopping</label>
           <input type="text" value="go shopping"
           class="todo__input-text task">
           <button class="todo__button todo__button-edit">Save</button>
           <button class="todo__button todo__button-delete">
-            <img class="icon-btn" src="./remove.svg" alt="">
+            <img class="list__icon-btn" src="./remove.svg" alt="">
           </button>
         </li>
       </ul>
@@ -53,12 +53,12 @@
       <h3 class="todo__list-title">Completed</h3>
       <ul id="completed-tasks" class="todo__list list list-complited">
         <li class="list__element">
-          <input type="checkbox" class="todo__input-checkbox" checked>
+          <input type="checkbox" class="list__input-checkbox" checked>
           <label class="todo__label task">See the Doctor</label>
           <input type="text" class="todo__input-text task">
           <button class="todo__button todo__button-edit">Edit</button>
           <button class="todo__button todo__button-delete">
-            <img class="icon-btn" src="./remove.svg" alt="">
+            <img class="list__icon-btn" src="./remove.svg" alt="">
           </button>
         </li>
       </ul>

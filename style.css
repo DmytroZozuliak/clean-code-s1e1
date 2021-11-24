@@ -28,7 +28,7 @@
 
 }
 
-.todo-wrapper {
+.todo {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -126,7 +126,7 @@ button{
   vertical-align: middle;
 }
 
-.list__element > .todo__input-checkbox {
+.list__element > .list__input-checkbox {
   margin: 0 10px;
 }
 
@@ -141,13 +141,13 @@ button{
   width: 226px;
 }
 
-.todo__button.todo__button-delete .icon-btn {
+.todo__button.todo__button-delete .list__icon-btn {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.todo__button.todo__button-delete .icon-btn:hover {
+.todo__button.todo__button-delete .list__icon-btn:hover {
   transform: rotateZ(0);
 }
 

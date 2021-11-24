@@ -40,7 +40,7 @@ var createNewTaskElement=function(taskString){
 
     //Each elements, needs appending
     checkBox.type="checkbox";
-    checkBox.className="todo__input-checkbox";
+    checkBox.className="list__input-checkbox";
 
     editInput.type="text";
     editInput.className="todo__input-text task";
@@ -51,7 +51,7 @@ var createNewTaskElement=function(taskString){
     deleteButton.className="todo__button todo__button-delete";
 
     deleteButtonImg.src='./remove.svg';
-    deleteButtonImg.className="icon-btn";
+    deleteButtonImg.className="list__icon-btn";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -162,7 +162,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector(".todo__input-checkbox");
+    var checkBox=taskListItem.querySelector(".list__input-checkbox");
     var editButton=taskListItem.querySelector(".todo__button.todo__button-edit");
     var deleteButton=taskListItem.querySelector(".todo__button.todo__button-delete");
 
